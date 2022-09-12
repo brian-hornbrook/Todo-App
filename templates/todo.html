@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+	<!-- bootstrap -->
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	<link rel="stylesheet" href="{{ url_for("static", filename="todo.css" ) }}">
+</head>
+
+<body>
+	
+    <header>
+		<div>
+			<h1>Todo App</h1>
+            <form action="/api/todos/add" method="POST">
+				<input type="text" name="note"" placeholder="add a note" />
+				<button>+ New Todo Item</button>
+			</form>
+		</div>
+    </header>
+	{% for todo in todos %}
+	<div id="content-area">
+        <div id="content">
+			<p>{{todo.note}}</p>
+			<span>
+				<!-- delete form -->
+				<form action="/api/todos/delete" method="POST">
+					<input type="hidden" name="note" value="{{todo.note}}" />
+					<button class="btn-close btn-close-white" aria-label="Close"></button>
+				</form>
+			</span>
+		</div>
+	</div>
+	{% endfor %}
+	<button type="button" class="btn-close btn-close-white" aria-label="Close"></button>
+</script>
+</body>
+</html>

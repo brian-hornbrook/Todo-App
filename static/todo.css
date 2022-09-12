@@ -1,0 +1,72 @@
+header {
+    text-align: center;
+    margin-bottom: 20px;
+	display: flex;
+	justify-content: center;
+}
+
+header div {
+	width: 90%;
+	background-color: lightskyblue;
+	padding: 20px;
+}
+
+header form input,
+header form button {
+	border-radius: 5px;
+	border: 0;
+	padding: 8px;
+}
+
+header form button {
+	font-weight: bolder;
+	cursor: pointer;
+}
+
+#content-area {
+    width: 100%;
+	display: flex;
+    justify-content: center;
+}
+
+#content {
+	width: 30%;
+	background-color: blue;
+	margin: 5px;
+}
+
+#content p {
+	text-align: center;
+	width: 77%;
+	padding: 5px 0;
+	margin: 0;
+	font-size: 1.3rem;
+	color: white;
+	display: inline-block;
+}
+
+#content span {
+	float: right;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+#content .btn-close {
+	opacity: 1;
+	color: white;
+}
+
+#delete button {
+	background-color: blue;
+	border: 0;
+	color: white;
+    padding-bottom: 5px;
+}
+
+#content svg {
+	height: 20px;
+	background-color: blue;
+	border: 0;
+	color: white;
+}
